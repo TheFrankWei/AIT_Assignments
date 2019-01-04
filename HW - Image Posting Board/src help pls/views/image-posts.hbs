@@ -1,0 +1,26 @@
+<h1>480Chan - Image Board!</h1>
+
+<form method="POST" action="/image-posts">
+  <ul>
+    Image Post Title: <input type="text" name="title"/> <ul></ul>
+    Image 1 URL: <input type="text" name="url1" />
+    , Caption <input type="text" name="caption1" /> <ul></ul>
+    Image 2 URL: <input type="text" name="url2"/>
+    , Caption <input type="text" name="caption2"/> <ul></ul>
+    Image 3 URL: <input type="text" name="url3"/>
+    , Caption <input type="text" name="caption3"/> <ul></ul>
+    <input type="submit" value = 'Add New Image Post'>
+  </ul>
+</form>
+
+
+<div>
+	{{#each posts}}
+    <h2> <a href="http://localhost:3000/image-posts/{{this.slug}}">{{this.slug}}</a></h2>
+	<div>
+    {{#each this.images}}
+		  {{this.caption}}<br/><img src={{this.url}}><br/>
+    {{/each}}
+	</div>
+	{{/each}}
+</div>

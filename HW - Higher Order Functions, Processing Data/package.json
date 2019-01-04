@@ -1,0 +1,23 @@
+{
+  "name": "yw1685-homework02",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/yelpfunc.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "mocha tests/hoffy-test.js"
+  },
+  "author": "Frank",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "eslint": "^4.7.2",
+    "mocha-sinon": "^2.0.0",
+    "sinon": "^4.0.0"
+  },
+  "dependencies": {
+    "request": "^2.83.0"
+  }
+}

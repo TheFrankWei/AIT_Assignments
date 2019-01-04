@@ -1,0 +1,31 @@
+<title>#HEXCUSE ME!</title>
+<h1>Welcome to #HEXCUSE ME!</h1>
+<form method="GET" action="/colors" style="color:white">
+	<ul>	
+		Red: <input type="text" name="red"
+				  style="background-color:red;"/></li>
+		Green: <input type="text" name="green"
+	 			  style="background-color:green;"/></li>
+		Blue: <input type="text" name="blue"
+				  style="background-color:blue;"/></li>
+		How Many?: <input type="text" name="total"/></li>
+		<input type="submit">
+	</ul>
+</form>
+
+
+<div>
+	{{#if isValid}}
+	<ul>
+		{{#each colors}}
+		<div style = "background-color: {{this.hex}}">
+			<li>{{this.name}} {{this.hex}}   ({{this.r}},{{this.g}},{{this.b}})</li>
+		</div>
+		{{/each}}
+	</ul>
+	{{else}}
+		<p>
+			Hey, "Red", "Green", and "Blue" should be from 0 through 255, and the "How Many?" should be between 2 and 10!
+		</p>
+	{{/if}}
+</div>

@@ -1,0 +1,25 @@
+<h1>Let's Watch Some Movies!</h1>
+
+<form method="GET" action="/movies/">
+  <ul>
+    Director: <input type="text" name="director"/><input type="submit">
+  </ul>
+</form>
+
+
+<table style="width:100%">
+  <thead>
+    <th>Title</th>
+    <th>Year</th> 
+    <th>Director</th>
+  </thead>
+  <tbody>
+  {{#each movies}}
+  <tr>
+    <td>{{this.title}}</td>
+    <td>{{this.year}}</td>
+    <td>{{this.director}}</td>
+  </tr>
+  {{/each}}
+  </tbody>
+</table>

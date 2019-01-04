@@ -1,0 +1,25 @@
+
+<h1>480Chan - Image Board!</h1>
+
+<div>
+	<form method="POST" action="/image-posts/{{posts.slug}}/delete">
+	{{#each posts}}
+    <h2> {{this.slug}}</h2>
+	<div>
+    {{#each this.images}}
+		  <input type="checkbox" name="delete" value={{this._id}}>
+			{{this.caption}}<br/><img src={{this.url}}><br/>
+    {{/each}}
+	</div>
+	{{/each}}
+	<input type="submit" value = 'Delete'>
+</form>
+</div>
+
+<form method="POST" action="/image-posts/{{posts.slug}}">
+  <ul>
+    Image URL: <input type="text" name="url" />
+    , Caption <input type="text" name="caption" /> <ul></ul>
+    <input type="submit" value = 'Add Another'>
+  </ul>
+</form>

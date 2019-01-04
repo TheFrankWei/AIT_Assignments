@@ -1,0 +1,35 @@
+<h1>Recommended Bands:</h1>
+<form action="" method="GET">
+	<input type="radio" name="filterGenre" value="Hip-Hop"/> Hip-Hop
+	<input type="radio" name="filterGenre" value="Rock"/> Rock
+	<input type="radio" name="filterGenre" value="Metal"/> Metal
+	<input type="radio" name="filterGenre" value="Electronic"/> Electronic
+	<input type="radio" name="filterGenre" value="Pop"/> Pop
+	<input type="radio" name="filterGenre" value="Jazz"/> Jazz
+	<input type="submit" value= "Filter by Genre">
+
+<h2>Recommended Bandz</h2>
+<div>
+	{{#each bands}}
+	<div>
+		<li>{{this.name}} | {{this.genre}} | {{this.location}} | {{this.description}}</li>	
+	</div>
+	{{/each}}
+</div>
+
+
+<h3>Add a band recommendation</h3>
+<form method="POST" action="/">
+	<ul>
+		Band Name: <input type="text" name="name"/><ul></ul>
+		Location: <input type="text" name="location"/><ul></ul>
+		Description: <input type="text" name="description"/><ul></ul>
+		Hip-Hop: <input type="radio" name="genre" value="Hip-Hop" /><ul></ul>
+		Rock: <input type="radio" name="genre" value="Rock"/><ul></ul>
+		Metal: <input type="radio" name="genre" value="Metal"/><ul></ul>
+		Electronic: <input type="radio" name="genre" value="Electronic"/><ul></ul>
+		Pop: <input type="radio" name="genre" value="Pop"/><ul></ul>
+		Jazz: <input type="radio" name="genre" value="Jazz"/><ul></ul>
+		<input type="submit">
+	</ul>
+</form>
